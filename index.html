@@ -1,0 +1,144 @@
+<head>
+	<title>CompressionGuesser</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+	<link href="./src/css.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-dragdata@2.2.3/dist/chartjs-plugin-dragdata.min.js"></script>
+	<script src="./src/filepaths.js"></script>
+	<script src="./src/js.js"></script>
+</head>
+<body>
+	<body class="lexend-400">
+		<div id="bodycopy"></div>
+		<div id="header">
+			CompressionGuesser
+			<div id="gamedisplay">Menu</div>
+			<button id="theme">Change Theme</button>
+		</div>
+		<div id="fader"></div>
+		<div id="selectmenu">
+			<div id="actualmenu">
+				<div class="menucontainer">
+					<div class="menutitle">Mode</div>
+					<div id="modedesc">Different types of modes to play.</div>
+					<div class="buttoncontainer">
+						<button id="1lives" class="mode green">Lives (1)</button>
+						<button id="3lives" class="mode">Lives (3)</button>
+						<button id="5lives" class="mode">Lives (5)</button>
+						<button id="10rounds" class="mode">10 Rounds</button>
+						<button id="25rounds" class="mode">25 Rounds</button>
+						<button id="endless" class="mode">Endless</button>
+						<button id="explore" class="mode">Explore</button>
+					</div>
+				</div>
+				<div class="menucontainer">
+					<div class="menutitle">Category</div>
+					<div id="miscdesc">Parameters to practice listening to.</div>
+					<div class="buttoncontainer">
+						<button id="threshold" class="category green">Threshold</button>
+						<button id="ratio" class="category">Ratio</button>
+						<button id="attack" class="category">Attack</button>
+						<button id="gain" class="category">Gain Reduction</button>
+						<button id="allcatagories" class="category">All</button>
+					</div>
+				</div>
+				<div class="menucontainer">
+					<div class="menutitle">Misc</div>
+					<div id="miscdesc">Other settings.</div>
+					<div class="buttoncontainer">
+						<button id="showamount" class="misc">Show Settings</button>
+						<button id="statistics" class="misc">Show Statistics</button>
+					</div>
+				</div>
+				<div class="menucontainer2">
+					<div>You can press the up/down arrow to switch tracks, and enter to submit. Find the parameters of the compression being applied.</div>
+					<button id="play">Start!</button>
+				</div>
+			</div>
+		</div>
+		<div id="game">
+			<div id="topcontainer">
+				<div id="audiostatus" style="font-size: 1.25vmin">Audio file is being decoded... Please wait...</div>
+				<button id="submit">Play Compressed Sample in Full to Submit</button>
+				<div id="afterbuttons">
+					<div id="thingy">SUPER F</div>
+					<button id="restart">Continue</button>
+				</div>
+				<label for="filechooser" style="display: none;" id="filelabel">Choose File: </label>
+				<select name="filechooser" id="filechooser" style="display: none;">
+				</select>
+				<button id="resetgainreduction" style="display: none;">Reset Max Gain Reduction</button>
+				<button id="import" style="display: none;">Import Compression Settings</button>
+				<label for="configchooser" style="display: none;" id="configlabel">Choose Config: </label>
+				<select name="configchooser" id="configchooser" style="display: none;">
+				</select>
+				<button id="chooseconfig">Load Config</button>
+			</div>
+			<div id="midcontainer">
+				<div id="statisticsdisplay">
+					<span id="fpsdisplay"></span>
+				</div>
+				<div id="eq">
+					<div id="trackcontainer">
+						<div id="track1">
+							<div class="text">
+								<span style="font-size: 2.5vmin;"> Loading... </span>
+							</div>
+							<div class="audio">
+								<button id="play1" class="green">Play Sound</button>
+							</div>
+						</div>
+						<div id="track2">
+							<div class="text">
+								<span style="font-size: 2.5vmin;"> Loading... <br /> </span>
+								<ul>
+									<li>Ratio: ???</li>
+									<li>Threshold: ???</li>
+									<li>Attack: ???</li>
+									<li>Gain Reduction: ???</li>
+								</ul>
+							</div>
+							<div class="audio">
+								<button id="play2">Play Sound</button>
+							</div>
+						</div>
+					</div>
+					<div id="compressor">
+						<div id="canvasparent" style="position: relative; height: 60%; aspect-ratio: 1 / 1"><canvas id="compressiongraph"></canvas></div>
+						<div id="compbottom">
+							<div style="grid-area: a">
+								<div id="ratiodisplay" style="width: 100%">Ratio: 4:1</div>
+								<input id="ratioslider" type="range" value="4" min="2" max="16" />
+							</div>
+							<div style="grid-area: b; flex-direction: column">
+								<div id="attackdisplay" style="width: 100%">Attack: 5ms</div>
+								<input id="attackslider" type="range" value="5" min="1" max="30" />
+							</div>
+							<div id="gain">
+								<div id="gainpackage">
+									<div id="gainreduction">
+										<div id="gaincontainer"></div>
+										<div id="gainlevel"></div>
+										<div id="gainline"></div>
+										<div id="guessline"></div>
+										<div id="labels">
+											<span>-0</span>
+											<span>-5</span>
+											<span>-10</span>
+											<span>-15</span>
+										</div>
+									</div>
+									<input id="gainreductionslider" type="range" value="0" min="0" max="15" />
+								</div>
+								<div id="sixseven">Gain Reduction (dB)</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="settings"></div>
+			</div>
+		</div>
+	</body>
+</body>
