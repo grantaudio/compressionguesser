@@ -1,6 +1,6 @@
 let files = [
 	{
-		path: "/assets/audio/isolated/kick/kick1.wav",
+		path: "../assets/audio/isolated/kick/kick1.wav",
 		title: "Kick Drum",
 		configs: [
 			{
@@ -56,7 +56,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/kick/kick2.wav",
+		path: "../assets/audio/isolated/kick/kick2.wav",
 		title: "Kick Drum",
 		configs: [
 			{
@@ -112,7 +112,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/kick/kick3.wav",
+		path: "../assets/audio/isolated/kick/kick3.wav",
 		title: "Kick Drum",
 		configs: [
 			{
@@ -168,7 +168,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/kick/kick4.wav",
+		path: "../assets/audio/isolated/kick/kick4.wav",
 		title: "Kick Drum",
 		configs: [
 			{
@@ -224,7 +224,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/kick/kick5.wav",
+		path: "../assets/audio/isolated/kick/kick5.wav",
 		title: "Kick Drum",
 		configs: [
 			{
@@ -280,7 +280,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/snare/snare1.wav",
+		path: "../assets/audio/isolated/snare/snare1.wav",
 		title: "Snare Drum",
 		configs: [
 			{
@@ -331,7 +331,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/snare/snare2.wav",
+		path: "../assets/audio/isolated/snare/snare2.wav",
 		title: "Snare Drum",
 		configs: [
 			{
@@ -382,7 +382,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/snare/snare3.wav",
+		path: "../assets/audio/isolated/snare/snare3.wav",
 		title: "Snare Drum",
 		configs: [
 			{
@@ -433,7 +433,7 @@ let files = [
 		],
 	},
 	{
-		path: "/assets/audio/isolated/snare/snare4.wav",
+		path: "../assets/audio/isolated/snare/snare4.wav",
 		title: "Snare Drum",
 		configs: [
 			{
