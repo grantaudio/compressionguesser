@@ -202,6 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				document.getElementById("configlabel").style.display = "inline";
 				document.getElementById("configchooser").style.display = "block";
 				document.getElementById("resetgainreduction").style.display = "block";
+				document.getElementById("chooseconfig").style.display = "block";
 				document.getElementById("import").style.display = "block";
 				document.getElementById("submit").textContent = "Change Track to Selected File";
 				for (i in files) {
